@@ -1,0 +1,27 @@
+<div id="bg">
+ <h1 id="logo">Fhotofy</h1>
+ <div id="right">
+<h1 id="quote">Store your Wonderful Frozen Moments for Free!</h1>
+<form #postForm="ngForm">
+  <h2 id="join">Join us now!</h2>
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your email</mat-label>
+    <input matInput type="email" id="email" name="email" minlength="5" maxlength="45" ngModel required>
+    <button mat-icon-button matSuffix>
+      <mat-icon>email</mat-icon></button>
+  </mat-form-field>
+  <br>
+   <mat-form-field appearance="fill">
+    <mat-label>Enter your password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" id="password" name="password" minlength="8" maxlength="45" ngModel required>
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon></button>
+    </mat-form-field>
+  <br>
+  <div id="but">
+     <button (click)="postData(postForm,'register')" mat-raised-button color="accent" id="register" name="register" value="register">Register</button>
+     <button (click)="postData(postForm,'login')" mat-raised-button color="primary" id="login" name="login" value="login">Login</button>
+  </div>
+</form>
+</div>
+</div>

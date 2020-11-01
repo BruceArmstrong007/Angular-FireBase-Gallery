@@ -1,0 +1,14 @@
+.container{
+  margin:5px;
+  float:left;
+  width:30%;
+  height:25%;
+}
+.container > a > img {
+  width: 100%;
+  height:auto;
+}
+#desc{
+  display:flex;
+  justify-content: space-between;
+}

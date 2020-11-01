@@ -1,0 +1,49 @@
+*{
+ color:white;
+}
+#logo,#quote{
+  font-family: "Comic Sans MS", cursive, sans-serif;
+ }
+mat-form-field{
+  width : 100%;
+
+}
+#but{
+  width : 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#right{
+  width:50%;
+  float: right;
+  margin-right:5%;
+}
+#bg{
+  width:100%;
+  height:100vh;
+  background-image:url(./photography.jpg);
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  position:relative;
+}
+#logo{
+  margin-top:2%;
+  margin-left:5%;
+  font-size:6vh;
+}
+
+form{
+  height:3vh;
+  margin-top:3%;
+  float: right;
+  width:80%;
+}
+#quote{
+font-size:5vh;
+line-height: 1em;
+}
+#join{
+  padding: 0%;
+  margin: 0%;
+}

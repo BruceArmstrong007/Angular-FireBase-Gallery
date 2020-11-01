@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "gallery-64c33": {
+      "hosting": {
+        "Fhotofy": [
+          "gallery-64c33"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<mat-toolbar class="toolbar" color="primary">
+  <span id="left">
+  <a id="logo">Fhotofy</a>
+  <a class="items" [routerLink]="['/upload',id]" routerLinkActive="router-link-active">Upload Pictures</a>
+  <a class="items" [routerLink]="['/gallery',id]" routerLinkActive="router-link-active">Gallery</a>
+  </span>
+  <span id="right">
+  <a class="com" [matMenuTriggerFor]="menu"><mat-icon id="icon">person</mat-icon></a>
+  <mat-menu #menu="matMenu">
+  <button mat-menu-item>Settings</button>
+  <button (click)="logout()" mat-menu-item>logout</button>
+</mat-menu>
+
+</span>
+</mat-toolbar>

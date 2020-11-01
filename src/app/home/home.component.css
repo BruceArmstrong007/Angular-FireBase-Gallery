@@ -1,0 +1,35 @@
+.toolbar{
+  width: 100%;
+  height:15vh;
+  display:flex;
+  justify-content: space-between;
+}
+*:not(mat-icon) {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-decoration:none;
+}
+
+#left{
+  display : flex;
+}
+#right{
+  margin-right: 5%;
+}
+#logo{
+  margin-top: 2%;
+  margin-right:8%;
+  margin-left:5%;
+  font-size:6vh;
+}
+.items{
+  margin-top: 2%;
+  margin-right:2%;
+  margin-left:2%;
+  color:white;
+}
+#icon{
+  font-size: 3em;
+}
+.com{
+  cursor: pointer;
+}
