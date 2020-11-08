@@ -4,7 +4,7 @@
     <a target="_blank" [href]="items.data().downloadURL">
       <img id="imgs"  [src]="items.data().downloadURL" [alt]="items.data().Name" >
     </a>
-    <div id="desc"><h3>File Name : {{items.data().Name}}</h3> <button mat-stroked-button color="warn" (click)="deleteData(items)">Delete</button></div>
+    <div id="desc"><h3>File Name : {{items.data().Name}}</h3> <button mat-stroked-button color="warn" (click)="deleteData(items.id,items.data().Name)">Delete</button></div>
 
   </div>
 </div>
