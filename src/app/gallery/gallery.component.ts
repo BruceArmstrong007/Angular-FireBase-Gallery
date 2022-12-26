@@ -1,21 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from "@angular/fire/firestore";
+import { AngularFirestore } from "@angular/fire/compat/firestore";
 import { Router,ActivatedRoute } from '@angular/router';
 import { GalleryService } from './gallery.service';
-import { AngularFireStorage } from '@angular/fire/storage';
+import { AngularFireStorage } from '@angular/fire/compat/storage';
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent implements OnInit {
-  id : string;
-  Date : Date;
-  Name : string;
-  downloadURL: string;
-  documentPhotos;
-  basepath : string;
-  ref;
+  id : any;
+  Date : any;
+  Name : any;
+  downloadURL: any;
+  documentPhotos: any;
+  basepath : any;
+  ref: any;
   constructor(private firebase : AngularFirestore,private router : Router,private firestorage : AngularFireStorage,private route : ActivatedRoute,private gallery : GalleryService) { }
 
   ngOnInit(): void {
@@ -35,7 +35,7 @@ export class GalleryComponent implements OnInit {
     this.ref = this.firestorage.ref(this.basepath);
     this.firebase.collection('users').doc(this.id).collection('photos').doc(imgId).delete().then(res => {
       console.log(res);
-      this.ref.child(imgName).delete().subscribe(res => {
+      this.ref.child(imgName).delete().subscribe((res:any)=> {
          console.log(res);
          window.location.reload();
        });

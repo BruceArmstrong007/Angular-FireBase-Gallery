@@ -1,28 +1,28 @@
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { AngularFireStorage, AngularFireUploadTask } from '@angular/fire/storage';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFireStorage, AngularFireUploadTask } from '@angular/fire/compat/storage';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UploadService {
-   task : AngularFireUploadTask;
-   path: string;
-   addedDocRef;
+   task : any;
+   path: any;
+   addedDocRef : any;
 
-  snapshot: Observable<any>;
-  downloadURL: string;
+  snapshot: any;
+  downloadURL: any;
   constructor(private http: HttpClient,private storage: AngularFireStorage,private firebase : AngularFirestore,private route : Router) { }
 
   uploadImage(image: File,id : string){
   this.path = 'images/'+id+'/'+image.name;
    const ref = this.storage.ref(this.path);
    this.task = this.storage.upload(this.path,image);
-   this.task.then(snapshot => {
-    snapshot.ref.getDownloadURL().then(url => {
+   this.task.then((snapshot:any) => {
+    snapshot.ref.getDownloadURL().then((url:any) => {
       this.downloadURL = url;
       console.log(this.downloadURL);
     }).then(()=>{

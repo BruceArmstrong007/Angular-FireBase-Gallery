@@ -18,7 +18,7 @@ import {MatInputModule} from '@angular/material/input';
 import{FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-import {AngularFireModule} from '@angular/fire';
+import { AngularFireModule} from '@angular/fire/compat'
 
 import {AuthService} from './auth/auth.service';
 import {HomeService} from './home/home.service';

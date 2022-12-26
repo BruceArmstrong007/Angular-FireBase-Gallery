@@ -7,7 +7,7 @@ import { Router,ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  id : string;
+  id : any;
   constructor(public homeService :HomeService,private router : Router,private route : ActivatedRoute) { }
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id');
