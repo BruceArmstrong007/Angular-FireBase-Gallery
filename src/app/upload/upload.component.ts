@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from "@angular/fire/firestore";
+import { AngularFirestore } from "@angular/fire/compat/firestore";
 import { ActivatedRoute } from '@angular/router';
 import { UploadService } from './upload.service';
 class ImageSnippet {
@@ -14,9 +14,9 @@ class ImageSnippet {
   styleUrls: ['./upload.component.css']
 })
 export class UploadComponent implements OnInit {
-   id: string;
+   id: any;
 
-  selectedFile: ImageSnippet;
+  selectedFile: any;
   constructor(private firebase : AngularFirestore,private route : ActivatedRoute,private upload : UploadService) { }
 
    ngOnInit(): void {
